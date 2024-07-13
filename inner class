@@ -1,0 +1,22 @@
+import java.util.*;
+class outer
+{
+    int data=10;
+    class inner
+    {
+        void print()
+        {
+            System.out.println("Inner class");
+        }
+    }
+}
+class main
+{
+    public static void main(String[]args)
+    {
+        outer a=new outer();
+        System.out.println(a.data);
+        outer.inner a1=a.new inner();
+        a1.print();
+    }
+}
